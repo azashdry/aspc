@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASPCC Price List</title>
+<style>
+body{font-family:Arial;background:#f0f4f8;padding:10px;margin:0}
+h1{background:#0d47a1;color:#fff;padding:14px;text-align:center;border-radius:8px;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+.cat{background:#fff;padding:15px;border-radius:10px;text-align:center;box-shadow:0 2px 5px rgba(0,0,0,0.1);cursor:pointer}
+.cat:active{background:#e3f2fd}
+.page{display:none}
+.page.active{display:block}
+.back{background:#c62828;color:#fff;border:none;padding:8px 12px;border-radius:6px;margin-bottom:8px}
+.card{background:#fff;padding:12px;margin:8px 0;border-left:4px solid #0d47a1;border-radius:8px}
+.card b{color:#0d47a1;font-size:14px}
+.price{font-weight:bold;color:#2e7d32;font-size:16px;margin:5px 0}
+.small{font-size:12px;color:#555;margin:2px 0}
+.call{background:#2e7d32;color:#fff;padding:8px;border:none;border-radius:6px;width:100%;margin-top:6px}
+.empty{padding:20px;text-align:center;color:#999}
+</style>
+</head>
+<body>
+
+<!-- SHAFI 1: Categories -->
+<div id="home" class="page active">
+<h1>📊 ASPCC Price List - ADUSTECH</h1>
+<div class="grid">
+<div class="cat" onclick="showCat('gas')">🔥<br>Gas Equipment</div>
+<div class="cat" onclick="showCat('phone')">📱<br>Phone Accessories</div>
+<div class="cat" onclick="showCat('food')">🍚<br>Food Materials</div>
+<div class="cat" onclick="showCat('transport')">🚌<br>Transport Money</div>
+<div class="cat" onclick="showCat('drinks')">🥤<br>Drinks</div>
+<div class="cat" onclick="showCat('cosmetic')">💄<br>Cosmetic</div>
+<div class="cat" onclick="showCat('clothes')">👔<br>Clothes</div>
+</div>
+</div>
+
+<!-- SHAFI 2: Items -->
+<div id="items" class="page">
+<button class="back" onclick="back()">⬅️ Back</button>
+<div id="content"></div>
+</div>
+
+<!-- Dole ne script.js ya zo kafin wannan -->
+<script src="script.js"></script>
+
+<script>
+function showCat(cat) {
+document.getElementById('home').classList.remove('active');
+document.getElementById('items').classList.add('active');
+let title = cat.charAt(0).toUpperCase() + cat.slice(1);
+let html = `<h1>${title}</h1>`;
+let items = data[cat] || [];
+
+if(items.length === 0) {
+html += `<div class="empty">Babu farashi tukuna<br>Je ka cika a admin.html</div>`;
+} else {
+items.forEach(item=>{
+html += `<div class="card">
+<b>${item.item}</b>
+<div class="price">${item.price}</div>
+<div class="small">📍 ${item.location}</div>
+<div class="small">🏪 ${item.shop}</div>
+<button class="call" onclick="window.location='tel:${item.phone}'">📞 Kira ${item.phone}</button>
+</div>`;
+});
+}
+document.getElementById('content').innerHTML = html;
+}
+
+function back() {
+document.getElementById('items').classList.remove('active');
+document.getElementById('home').classList.add('active');
+}
+</script>
+
+</body>
+</html>
