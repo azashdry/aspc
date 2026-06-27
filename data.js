@@ -1,37 +1,18 @@
- },
+const data = {
 
+ "gas": [
  {
- item: "Bluetooth shop 3",
- price: "₦4500",
- location: "Opposite twins theatre",
- shop: "Mai ibada",
- phone: "08015173816"
+ item: "Gas refilling 1kg shop 1",
+ price: "₦200000",
+ location: "Kwari",
+ shop: "Shagon aminu",
+ phone: "0912092713"
  },
 
- {
- item: "Earfies shop 1",
- price: "₦700",
- location: "Male hostel",
- shop: "Dan kaka",
- phone: "09025282168"
- },
+ ],
 
- {
- item: "earfies shop 2",
- price: "₦600",
- location: "Female hostel",
- shop: "Shagon alh",
- phone: "09130272639"
- },
-
- {
- item: "earfies shop 3",
- price: "₦800",
- location: "Gidan wuta",
- shop: "Mai wuya Nigeria",
- phone: "07012518168"
- },
-
+ "phone": [
+ // Babu data tukuna
  ],
 
  "food": [
