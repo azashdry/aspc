@@ -1,6 +1,84 @@
 const data = {
 
  "gas": [
+ {
+ item: "Gas refilling 1kg shop 1",
+ price: "₦2000",
+ location: "Kofar commercial",
+ shop: "Shagon adamu",
+ phone: "09120982615"
+ },
+
+ {
+ item: "Gas refilling 1kg shop 2",
+ price: "₦1900",
+ location: "Kwankwasiyya gate",
+ shop: "Balarabe shop",
+ phone: "070152727151"
+ },
+
+ {
+ item: "Gas refilling 1kg shop 3",
+ price: "₦1700",
+ location: "University gate",
+ shop: "Shagon Nepa",
+ phone: "08012614816"
+ },
+
+ {
+ item: "Gas cylinder 1kg shop 1",
+ price: "₦10000",
+ location: "Opposite hisbah office",
+ shop: "Nababa",
+ phone: "081202715185"
+ },
+
+ {
+ item: "Gas cylinder 2kg shop 2",
+ price: "₦20000",
+ location: "Kwankwasiyya",
+ shop: "SUNUSI KANI shop",
+ phone: "07016241825"
+ },
+
+ {
+ item: "Gas cylinder 1kg shop 3",
+ price: "₦11000",
+ location: "SAP hotel",
+ shop: "Fateema shop",
+ phone: "08052614846"
+ },
+
+ ],
+
+ "phone": [
+ // Babu data tukuna
+ ],
+
+ "food": [
+ // Babu data tukuna
+ ],
+
+ "transport": [
+ // Babu data tukuna
+ ],
+
+ "drinks": [
+ // Babu data tukuna
+ ],
+
+ "cosmetic": [
+ // Babu data tukuna
+ ],
+
+ "clothes": [
+ // Babu data tukuna
+ ],
+
+};
+const data = {
+
+ "gas": [
  // Babu data tukuna
  ],
 
