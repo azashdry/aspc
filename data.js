@@ -8,7 +8,6 @@ const data = {
  shop: "Shagon adamu",
  phone: "09120982615"
  },
-
  {
  item: "Gas refilling 1kg shop 2",
  price: "₦1900",
@@ -16,7 +15,6 @@ const data = {
  shop: "Balarabe shop",
  phone: "070152727151"
  },
-
  {
  item: "Gas refilling 1kg shop 3",
  price: "₦1700",
@@ -24,7 +22,6 @@ const data = {
  shop: "Shagon Nepa",
  phone: "08012614816"
  },
-
  {
  item: "Gas cylinder 1kg shop 1",
  price: "₦10000",
@@ -32,7 +29,6 @@ const data = {
  shop: "Nababa",
  phone: "081202715185"
  },
-
  {
  item: "Gas cylinder 2kg shop 2",
  price: "₦20000",
@@ -40,46 +36,13 @@ const data = {
  shop: "SUNUSI KANI shop",
  phone: "07016241825"
  },
-
  {
  item: "Gas cylinder 1kg shop 3",
  price: "₦11000",
  location: "SAP hotel",
  shop: "Fateema shop",
  phone: "08052614846"
- },
-
- ],
-
- "phone": [
- // Babu data tukuna
- ],
-
- "food": [
- // Babu data tukuna
- ],
-
- "transport": [
- // Babu data tukuna
- ],
-
- "drinks": [
- // Babu data tukuna
- ],
-
- "cosmetic": [
- // Babu data tukuna
- ],
-
- "clothes": [
- // Babu data tukuna
- ],
-
-};
-const data = {
-
- "gas": [
- // Babu data tukuna
+ }
  ],
 
  "phone": [
@@ -90,7 +53,6 @@ const data = {
  shop: "Shagon dadaye",
  phone: "07017251826"
  },
-
  {
  item: "phone charging shop 2",
  price: "₦150",
@@ -98,7 +60,6 @@ const data = {
  shop: "Shagon shawili",
  phone: "08012628151"
  },
-
  {
  item: "phone charging shop 3",
  price: "₦70",
@@ -106,7 +67,6 @@ const data = {
  shop: "Shagon fateema",
  phone: "07026241825"
  },
-
  {
  item: "Power bank charging shop 1",
  price: "₦200",
@@ -114,7 +74,6 @@ const data = {
  shop: "Shagon dadaye",
  phone: "07027141812"
  },
-
  {
  item: "power bank charging shop 2",
  price: "₦250",
@@ -122,7 +81,6 @@ const data = {
  shop: "Shagon sadiya",
  phone: "07012825182"
  },
-
  {
  item: "power bank charging shop 3",
  price: "₦300",
@@ -130,7 +88,6 @@ const data = {
  shop: "Shagon Aminu",
  phone: "07038262815"
  },
-
  {
  item: "Charger type c shop 1",
  price: "₦700",
@@ -138,7 +95,6 @@ const data = {
  shop: "Shagon muhammad",
  phone: "070252731628"
  },
-
  {
  item: "charger type c shop 2",
  price: "₦1000",
@@ -146,35 +102,19 @@ const data = {
  shop: "Shagon jenet",
  phone: "08012836157"
  },
-
  {
  item: "charger type c shop 3",
  price: "₦1500",
  location: "Opposite hisbah office",
  shop: "Shagon adamu",
  phone: "08015363746"
- },
-
+ }
  ],
 
- "food": [
- // Babu data tukuna
- ],
-
- "transport": [
- // Babu data tukuna
- ],
-
- "drinks": [
- // Babu data tukuna
- ],
-
- "cosmetic": [
- // Babu data tukuna
- ],
-
- "clothes": [
- // Babu data tukuna
- ],
+ "food": [],
+ "transport": [],
+ "drinks": [],
+ "cosmetic": [],
+ "clothes": []
 
 };
