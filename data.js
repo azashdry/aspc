@@ -188,9 +188,206 @@ const data = {
  },
 
  ],
- "drinks":[],
- "clothes":[],
- "others":[],
- "transport":[],
+ 
+ "gas": [
+ // Babu data tukuna
+ ],
 
+ "phone": [
+ // Babu data tukuna
+ ],
+
+ "food": [
+ // Babu data tukuna
+ ],
+
+ "transport": [
+ // Babu data tukuna
+ ],
+
+ "drinks": [
+ {
+ item: "Coke 50cl shop 1",
+ price: "₦500",
+ location: "School gate",
+ shop: "Nana shop",
+ phone: "0701242627"
+ },
+
+ {
+ item: "coke 50cl shop 2",
+ price: "₦450",
+ location: "Male hostel",
+ shop: "Dan aljanna shop",
+ phone: "07012426247"
+ },
+
+ {
+ item: "coke 50cl shop 3",
+ price: "₦600",
+ location: "Yan kwaya line",
+ shop: "Abbas shop",
+ phone: "08016254352"
+ },
+
+ {
+ item: "Coke 25cl shop 1",
+ price: "₦250",
+ location: "Female hostel",
+ shop: "Alhaji shop",
+ phone: "07015328543"
+ },
+
+ {
+ item: "coke 25cl shop 2",
+ price: "₦300",
+ location: "Male hostel",
+ shop: "Saifullah shop",
+ phone: "09017528352"
+ },
+
+ {
+ item: "coke 25cl shop 3",
+ price: "₦270",
+ location: "Anguwan fulani",
+ shop: "Adhama shop",
+ phone: "08014627426"
+ },
+
+ {
+ item: "Fanta 50cl shop 1",
+ price: "₦550",
+ location: "Opposite school gate",
+ shop: "Neefah shop",
+ phone: "07016543754"
+ },
+
+ {
+ item: "fanta 50cl shop 2",
+ price: "₦600",
+ location: "Male hostel",
+ shop: "Dan ladi shop",
+ phone: "09032152535"
+ },
+
+ {
+ item: "fanta 50cl shop 3",
+ price: "₦450",
+ location: "Opposite hisbah office",
+ shop: "Kani shop",
+ phone: "09032136175"
+ },
+
+ {
+ item: "malt shop 1",
+ price: "₦700",
+ location: "Opposite university gate",
+ shop: "Aliyu gate",
+ phone: "07043173161"
+ },
+
+ {
+ item: "malt shop 2",
+ price: "₦650",
+ location: "Male hostel",
+ shop: "Al ameen shop",
+ phone: "09012097235"
+ },
+
+ {
+ item: "Malt shop 3",
+ price: "₦550",
+ location: "Commercial gate",
+ shop: "Nababa shop",
+ phone: "07025162435"
+ },
+
+ {
+ item: "table water shop 1",
+ price: "₦300",
+ location: "School gate",
+ shop: "Khadija shop",
+ phone: "07012253728"
+ },
+
+ {
+ item: "table water shop 2",
+ price: "₦250",
+ location: "Female hostel",
+ shop: "Fiddausi shop",
+ phone: "07013154757"
+ },
+
+ {
+ item: "Table water shop 3",
+ price: "₦350",
+ location: "Male hostel",
+ shop: "Kadada shop",
+ phone: "07012137151"
+ },
+
+ {
+ item: "Fearless shop 1",
+ price: "₦600",
+ location: "Male hostel",
+ shop: "Kadada shop",
+ phone: "070125261471"
+ },
+
+ {
+ item: "fearless shop 2",
+ price: "₦530",
+ location: "Female hostel",
+ shop: "Alhaji shop",
+ phone: "09024317341"
+ },
+
+ {
+ item: "fearless shop 3",
+ price: "₦450",
+ location: "Opposite hisbah office",
+ shop: "Khalid shop",
+ phone: "09012543341"
+ },
+
+ {
+ item: "pure water per 3 shop 1",
+ price: "₦50",
+ location: "Yana kwaya line",
+ shop: "Abbas shop",
+ phone: "07052148162"
+ },
+
+ {
+ item: "pure water per 3 shop 3",
+ price: "₦60",
+ location: "Male hostel",
+ shop: "Kadada shop",
+ phone: "0701264217"
+ },
+
+ {
+ item: "pure water per 3 shop 3",
+ price: "₦75",
+ location: "Female hostel",
+ shop: "Alhaji shop",
+ phone: "07015243126"
+ },
+
+ ],
+
+ "cosmetic": [
+ // Babu data tukuna
+ ],
+
+ "clothes": [
+ // Babu data tukuna
+ ],
+
+ "Others": [
+ // Babu data tukuna
+ ],
+"restourant":[
+  
+  ]
 };
