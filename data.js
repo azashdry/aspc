@@ -111,7 +111,7 @@ const data = {
  }
  ],
 
- "food": [],
+ 
  
 
  "food": [
@@ -189,21 +189,7 @@ const data = {
 
  ],
  
- "gas": [
- // Babu data tukuna
- ],
-
- "phone": [
- // Babu data tukuna
- ],
-
- "food": [
- // Babu data tukuna
- ],
-
- "transport": [
- // Babu data tukuna
- ],
+ 
 
  "drinks": [
  {
