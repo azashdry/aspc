@@ -5,29 +5,174 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>ASPCC Price Compare - ADUSTECH</title>
 <style>
-body{font-family:Arial;background:#f0f4f8;margin:0;padding:10px}
-h1{background:#0d47a1;color:#fff;padding:12px;text-align:center;border-radius:8px;font-size:15px;margin-bottom:12px}
-.search{width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;margin-bottom:10px;box-sizing:border-box}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.box{background:#fff;padding:15px;border-radius:10px;text-align:center;box-shadow:0 2px 5px rgba(0,0,0,0.1);cursor:pointer}
-.box b{color:#0d47a1;font-size:13px}
-.page{display:none}.page.active{display:block}
-.back{background:#c62828;color:#fff;border:none;padding:10px;width:100%;border-radius:6px;margin-bottom:10px;font-weight:bold;cursor:pointer}
-.item{background:#fff;padding:10px;margin-bottom:10px;border-left:4px solid #0d47a1;border-radius:6px}
-.item b{font-size:13px;color:#0d47a1}
-.item p{margin:4px 0;font-size:12px}
-.price{color:#c62828;font-weight:bold;font-size:14px}
-.no-data{text-align:center;color:#999;padding:30px}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#eef3f9;
+padding:12px;
+color:#333;
+}
+
+h1{
+background:linear-gradient(135deg,#0d47a1,#1565c0);
+color:#fff;
+padding:16px;
+text-align:center;
+border-radius:14px;
+font-size:22px;
+box-shadow:0 4px 12px rgba(0,0,0,.15);
+margin-bottom:8px;
+}
+
+.subtitle{
+text-align:center;
+font-size:13px;
+color:#666;
+margin-bottom:15px;
+}
+
+.search{
+width:100%;
+padding:13px;
+border:1px solid #ddd;
+border-radius:12px;
+font-size:15px;
+outline:none;
+background:#fff;
+margin-bottom:15px;
+transition:.3s;
+}
+
+.search:focus{
+border-color:#1565c0;
+box-shadow:0 0 8px rgba(21,101,192,.25);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+}
+
+.box{
+background:#fff;
+border-radius:16px;
+padding:22px 12px;
+text-align:center;
+cursor:pointer;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.box:hover{
+transform:translateY(-4px);
+}
+
+.box b{
+display:block;
+font-size:18px;
+color:#0d47a1;
+margin-bottom:6px;
+}
+
+.box small{
+color:#666;
+font-size:13px;
+}
+
+.page{
+display:none;
+}
+
+.page.active{
+display:block;
+}
+
+.back{
+background:#d32f2f;
+color:#fff;
+border:none;
+padding:12px;
+width:100%;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+margin-bottom:12px;
+}
+
+.item{
+background:#fff;
+border-left:5px solid #1565c0;
+padding:14px;
+margin-bottom:12px;
+border-radius:12px;
+box-shadow:0 3px 8px rgba(0,0,0,.08);
+}
+
+.item b{
+display:block;
+font-size:16px;
+color:#0d47a1;
+margin-bottom:6px;
+}
+
+.price{
+font-size:18px;
+font-weight:bold;
+color:#d32f2f;
+margin:8px 0;
+}
+
+.item p{
+font-size:13px;
+margin:4px 0;
+}
+
+.item a{
+color:#0d47a1;
+text-decoration:none;
+font-weight:bold;
+}
+
+.no-data{
+background:#fff;
+padding:30px;
+text-align:center;
+border-radius:12px;
+color:#777;
+}
+
+.footer{
+margin-top:25px;
+text-align:center;
+font-size:12px;
+color:#777;
+}
 </style>
 </head>
 <body>
-
 <div id="cats" class="page active">
+
 <h1>🛒 ASPCC PRICE COMPARE</h1>
-<input type="text" class="search" placeholder="🔍 Nema Category..." onkeyup="searchCat(this.value)">
-<div class="grid" id="catGrid"></div>
+
+<div class="subtitle">
+Compare prices from different shops around ADUSTECH and save your money.
+</div>
+<div class="subtitle" id="catCount">
+Loading categories...
 </div>
 
+<input type="text" class="search" placeholder="🔍 Nema Category..." onkeyup="searchCat(this.value)">
+
+
+
+<div class="grid" id="catGrid"></div>
+</div>
 <div id="items" class="page">
 <button class="back" onclick="back()">⬅ BACK</button>
 <input type="text" class="search" placeholder="🔍 Nema Item..." onkeyup="searchItem(this.value)">
@@ -41,25 +186,50 @@ let currentCat = '';
 function loadCats(){
 let catGrid = document.getElementById('catGrid');
 catGrid.innerHTML = '';
+
+let total = Object.keys(data).length;
+let count = document.getElementById("catCount");
+if(count){
+count.innerHTML = "📂 Total Categories: " + total;
+}
 for(let cat in data){
   let count = data[cat].length;
   let name = cat.charAt(0).toUpperCase() + cat.slice(1);
-  catGrid.innerHTML += `<div class="box" onclick="openCat('${cat}')">${name}<br><small>${count} items</small></div>`;
+  catGrid.innerHTML += `
+<div class="box" onclick="openCat('${cat}')">
+  <b>${name}</b>
+  <small>${count} items</small>
+</div>`;
 }
 }
 
 function searchCat(val){
-val = val.toLowerCase();
-let catGrid = document.getElementById('catGrid');
-catGrid.innerHTML = '';
-for(let cat in data){
-  if(cat.toLowerCase().includes(val)){
-    let count = data[cat].length;
-    let name = cat.charAt(0).toUpperCase() + cat.slice(1);
-    catGrid.innerHTML += `<div class="box" onclick="openCat('${cat}')">${name}<br><small>${count} items</small></div>`;
+  val = val.toLowerCase();
+  let catGrid = document.getElementById('catGrid');
+  catGrid.innerHTML = '';
+
+  let found = 0;
+
+  for(let cat in data){
+    if(cat.toLowerCase().includes(val)){
+      found++;
+      let count = data[cat].length;
+      let name = cat.charAt(0).toUpperCase() + cat.slice(1);
+
+      catGrid.innerHTML += `
+      <div class="box" onclick="openCat('${cat}')">
+        ${name}<br>
+        <small>${count} items</small>
+      </div>`;
+    }
+  }
+
+  if(found == 0){
+    catGrid.innerHTML =
+    '<div class="no-data">❌ No category found</div>';
   }
 }
-}
+
 
 function openCat(cat){
 currentCat = cat;
@@ -102,5 +272,10 @@ if(typeof data!== 'undefined'){
   document.getElementById('catGrid').innerHTML = '<div class="no-data">Babu data.js<br><small>Ka generate code a admin</small></div>';
 }
 </script>
+<div class="footer">
+<b>ASPCC Price Compare</b><br>
+Made for ADUSTECH Students ❤️<br>
+Version 1.0
+</div>
 </body>
 </html>
