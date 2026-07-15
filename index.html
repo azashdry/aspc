@@ -153,7 +153,8 @@ font-size:12px;
 color:#777;
 }
 </style>
-
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1565c0">
 </head>  
 <body>  
 <div id="cats" class="page active">  <h1>🛒 ASPCC PRICE COMPARE</h1>  <div class="subtitle">  
@@ -266,6 +267,11 @@ Version 1.0
 <script>
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("./service-worker.js");
+}
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
 }
 </script>
 </body>  
