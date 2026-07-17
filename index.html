@@ -222,6 +222,25 @@ color:#1565c0;
 color:#666;
 font-size:13px;
 }
+.install-btn{
+width:100%;
+padding:14px;
+margin-top:18px;
+border:none;
+border-radius:12px;
+background:#2e7d32;
+color:#fff;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 4px 10px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.install-btn:hover{
+background:#1b5e20;
+}
+
 </style>
 </head>
 <body>
@@ -272,21 +291,7 @@ Version 2.0
 
 </div>
 
-<h1><img src="logo.png" alt="ASPCC Logo" width="70">ASPCC PRICE COMPARE</h1>
 
-<div class="subtitle">
-Compare prices from different shops around ADUSTECH and save your money.
-</div>
-<div class="subtitle" id="catCount">
-Loading categories...
-</div>
-
-<input type="text" class="search" placeholder="🔍 Nema Category..." onkeyup="searchCat(this.value)">
-
-
-
-<div class="grid" id="catGrid"></div>
-</div>
 <div id="items" class="page">
 <button class="back" onclick="back()">⬅ BACK</button>
 <input type="text" class="search" placeholder="🔍 Nema Item..." onkeyup="searchItem(this.value)">
@@ -392,24 +397,8 @@ if(typeof data!== 'undefined'){
 } else {
   document.getElementById('catGrid').innerHTML = '<div class="no-data">Babu data.js<br><small>Ka generate code a admin</small></div>';
 }
-.install-btn{
-width:100%;
-padding:14px;
-margin-top:18px;
-border:none;
-border-radius:12px;
-background:#2e7d32;
-color:#fff;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
-box-shadow:0 4px 10px rgba(0,0,0,.15);
-transition:.3s;
-}
 
-.install-btn:hover{
-background:#1b5e20;
-}
+
 let deferredPrompt;
 
 window.addEventListener("beforeinstallprompt", (e) => {
@@ -430,10 +419,6 @@ window.addEventListener("beforeinstallprompt", (e) => {
 <button id="installBtn" class="install-btn" style="display:none;">
 📲 Install ASPCC App
 </button>
-<div class="footer">
-<b>ASPCC Price Compare</b><br>
-Made for ADUSTECH Students ❤️<br>
-Version 1.0
-</div>
+
 </body>
 </html>
